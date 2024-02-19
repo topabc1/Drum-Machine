@@ -1,0 +1,158 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	user-select: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: gray;
+}
+/**********************************/
+#drum-machine {
+	display: flex;
+	margin: auto;
+	margin-top: 50vh;
+	transform: translate(0, -50%);
+	display: flex;
+	width: 40rem;
+	height: 20rem;
+	border: 0.5rem solid darkorange;
+	background-color: darkgray;
+}
+
+#logo {
+	position: absolute;
+	text-align: right;
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	z-index: 999;
+}
+/************************************/
+#drum-pad {
+	display: grid;
+	grid-template-columns: repeat(3, 6rem);
+	grid-template-rows: repeat(3, 5rem);
+	gap: 0.8rem;
+	text-align: center;
+	margin: auto;
+	margin-left: 1.5rem;
+	margin-top: 1.2rem;
+	font-weight: bold;
+}
+
+.drum-pad {
+	background-color: gray;
+	width: 6rem;
+	height: 5rem;
+	padding-top: 2rem;
+	box-shadow: 0.1rem 0.1rem 0.4rem 0.1rem;
+	transition: box-shadow 0.2s, margin-top 0.2s;
+	border-radius: 0.2rem;
+}
+
+.drum-pad:hover {
+	cursor: pointer;
+}
+/*******************************************/
+#controls {
+	margin: auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+#power {
+	width: 3rem;
+	height: 1.5rem;
+	background-color: black;
+	padding: 0.2rem;
+	margin: auto;
+	margin-bottom: 1rem;
+}
+
+#power div {
+	height: 1.1rem;
+	width: 1.2rem;
+	background-color: blue;
+	margin-left: 1.4rem;
+}
+
+#power div:hover {
+	cursor: pointer;
+}
+
+#display {
+	width: 12rem;
+	height: 3rem;
+	background-color: gray;
+	margin: auto;
+	padding-top: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+#volume {
+	height: 0.4rem;
+	width: 14rem;
+	background-color: gray;
+	border: 0.1rem solid black;
+	box-shadow: 0.1rem 0.1rem 0.2rem 0 black;
+	margin: auto;
+	margin-bottom: 1.5rem;
+	padding-right: 0.5rem;
+}
+
+#volume div {
+	width: 0.5rem;
+	height: 1.5rem;
+	background-color: blue;
+	margin-left: 0;
+	margin-top: -0.6rem;
+	padding: 0;
+	box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem black;
+}
+
+#volume div:hover {
+	cursor: pointer;
+}
+
+#bank {
+	width: 3rem;
+	height: 1.5rem;
+	background-color: black;
+	padding: 0.2rem;
+	margin: auto;
+}
+
+#bank div {
+	height: 1.1rem;
+	width: 1.2rem;
+	background-color: blue;
+	margin-left: 0;
+}
+
+#bank div:hover {
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 675px) {
+	
+	#drum-machine {
+		display: block;
+		width: 95vw;
+		height: 36rem;
+	}
+	
+	#drum-pad {
+		margin-bottom: 1.5rem;
+		margin-left: 50%;
+		margin-top: 2.5rem;
+		justify-content: center;
+		transform: translate(-50%, 0);
+	}
+	
+}
